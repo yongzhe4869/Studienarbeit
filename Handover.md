@@ -1,6 +1,6 @@
 ## Classic Handover
 The classic Handover process is based on the transfer of message between UE, eNBs and MME. The whole Process is divided into 3 parts:
-* Handover preparetion
+* Handover preparetion/n
   Data flows between UE and serving eNB (measurement control and report)
 * Handover execution
   Handover Request to target eNB, Request Ack to serving eNB, Handover Command to UE,     Synchronisation and Handover Confirm to target eNB 
