@@ -7,5 +7,6 @@ The classic Handover process is based on the transfer of message between UE, eNB
 * Handover completion  
   Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
   |Events|description|formula|  
-  |----|----|-----|
+  |----|----|-----|  
+  |A1|Serving becomes better than threshold|RSRQ>threshold1|
   
