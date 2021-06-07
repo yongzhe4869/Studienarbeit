@@ -8,5 +8,7 @@ The classic Handover process is based on the transfer of message between UE, eNB
   Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
   |Events|description|formula|  
   |----|----|-----|  
-  |A1|Serving becomes better than threshold|RSRQ>threshold1|
-  
+  |A1|Serving becomes better than threshold|RSRQ(s)>threshold1|  
+  |A2|Serving becomes worse than threshold|RSRQ(s)<threshold2|  
+  |A3|Neighbour becomes offset better than serving|RSRQ(t)-RSRQ(S)>offset|  
+  |A4|Neighbour becomes better than threshold|RSRQ(t)>threshold3|  
