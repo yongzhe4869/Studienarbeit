@@ -5,4 +5,7 @@ The classic Handover process is based on the transfer of message between UE, eNB
 * Handover execution  
   Handover Request to target eNB, Request Ack to serving eNB, Handover Command to UE,     Synchronisation and Handover Confirm to target eNB 
 * Handover completion  
-  Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release
+  Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
+  |Events|description|formula|
+  |1|2|3|
+  
