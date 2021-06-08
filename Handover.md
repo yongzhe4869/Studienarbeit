@@ -12,4 +12,4 @@ The classic Handover process is based on the transfer of message between UE, eNB
   |A2|Serving becomes worse than threshold|RSRP(s)<threshold2|  
   |A3|Neighbour becomes offset better than serving|RSRP(t)-RSRQ(S)>offset|  
   |A4|Neighbour becomes better than threshold|RSRP(t)>threshold3|  
-![](https://github.com/yongzhe4869/Studienarbeit/ho.png)
+![ho](https://github.com/yongzhe4869/Studienarbeit/ho.png)
