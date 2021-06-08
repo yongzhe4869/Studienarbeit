@@ -6,7 +6,7 @@ The classic Handover process is based on the transfer of message between UE, eNB
   Handover Request to target eNB, Request Ack to serving eNB, Handover Command to UE,     Synchronisation and Handover Confirm to target eNB 
 * Handover completion  
   Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
-# Handover Parameters  
+### Handover Parameters  
 * Reference Signal Received Power(RSRP)  
   This prarmeter provides cell-specific signal strength metric. It is used as an Input and decision criterion.
 * Reference Signal Received Quality(RSRQ)  
