@@ -10,8 +10,9 @@ The classic Handover process is based on the transfer of message between UE, eNB
 * Reference Signal Received Power(RSRP)  
   This prarmeter provides cell-specific signal strength metric. It is used as an Input and decision criterion.
 * Reference Signal Received Quality(RSRQ)  
-  This prarmeter provides cell-specific signal quality metric. It is also used as an Input and decision criterion. It is defined as: RSRQ = N*RSRP/RSSI
-* Hysteresis margin
+  This prarmeter provides cell-specific signal quality metric. It is also used as an Input and decision criterion.  
+  It is defined as: RSRQ = N*RSRP/RSSI
+* Hysteresis margin  
   Handover will be initiated if RSRQ(t)-RSRQ(s)= Hysteresis. This Parameter is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
   HO will be initiated when the request of HO is over. It can decrease the number of unnecessary HO and avoid ping-pong effects. But it can delay the HO.  
