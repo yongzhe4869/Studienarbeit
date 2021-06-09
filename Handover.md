@@ -28,4 +28,6 @@ Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values
 * Minimize the number of handover failures  
 * Minimize the number of unnecessary handovers  
 * Minimize handover delay  
-* increasing system throughput
+* increasing system throughput  
+## Handover using Reinforcement Learning
+Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.
