@@ -32,4 +32,5 @@ Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
 ### Reinforcement Learning
-RL is a subclass of machine learning and it is different from supervised-and unsupervised learning, because RL don't require labelled input/output. However, the key point of RL is find the maximal reward based on trial and error in the environment. 
+RL is a subclass of machine learning and it is different from supervised-and unsupervised learning, because RL don't require labelled input/output. However, the key point of RL is find the maximal reward based on trial and error in the environment.  
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)
