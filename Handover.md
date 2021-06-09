@@ -18,13 +18,13 @@ The classic Handover process is based on the transfer of message between UE, eNB
   HO will be initiated when the request of HO is over. It can decrease the number of unnecessary HO and avoid ping-pong effects. But it can delay the HO.  
 Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values result in call drops and bad transmission.  
 ### Handover Events  
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/ho.PNG)  
   |Events|description|formula|  
   |----|----|-----|  
   |A1|Serving becomes better than threshold|RSRP(s)>threshold1|  
   |A2|Serving becomes worse than threshold|RSRP(s)<threshold2|  
   |A3|Neighbour becomes offset better than serving|RSRP(t)-RSRQ(S)>offset|  
   |A4|Neighbour becomes better than threshold|RSRP(t)>threshold3|  
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/ho.PNG)  
 ### Optimization principles  
 * Minimize the number of handover failures  
 * Minimize the number of unnecessary handovers  
