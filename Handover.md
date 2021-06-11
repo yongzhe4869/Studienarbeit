@@ -36,4 +36,6 @@ Because the HO parameter selection is a trade-off problem and it is hard to calc
 RL is a subclass of machine learning and it is different from supervised-and unsupervised learning, because RL don't require labelled input/output but it uses rewards and punishment as signals for positive and negative behavior. So the key point of RL is find the maximal reward based on trial and error in the environment. And it is based on Markov Decision Process(MDP) and the key terms of RL are Agent, Action, State, Reward, Policy and Environment.
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)  
 ### State of the art  
+|Paper|Algorithm|Policy|comments|
+|5G Handover using Reinforcement learning|Q-Learning with e-greedy alogorithm for CMAB, HO Algorithm using Access-Beams|a RL agent replaced classic HO controller, handle the measurement report and choose action to maximize the throughput|received RSRP of link-beam after HO as reward |
 
