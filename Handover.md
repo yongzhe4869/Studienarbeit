@@ -37,7 +37,7 @@ RL is a subclass of machine learning and it is different from supervised-and uns
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)  
 ### State of the art  
 |Paper|Algorithm|Policy|comments|  
-|-----|------|------|-------|
+|------|------|-------|-------|
 |5G Handover using Reinforcement learning|Q-Learning with e-greedy alogorithm for CMAB, HO Algorithm using Access-Beams|a RL agent replaced classic HO controller, handle the measurement report and choose action to maximize the throughput|received RSRP of link-beam after HO as reward, compare RL alogorithm with classic Algorithm|
 |DRL based HO Management for mm Wave Communication|Deep Q-Learning, Deep Neural Network (DNN), rate based HO (RBH)|Optimal BS Selection based on DRL, one hot-code to describe BS, received SNR of all BSs is the important parameter for BS Selection|This work use recevied SNR to bulid throughput as reward, it talk about HetNets with dense mm-wave BS, compare RBH with DQN|  
 |A Parameter Optimization Method for LTE-R HO based on RL|Q-Learning, situation maps, LTE-R system for high speed|find optimal HO parameter using RL in HO process, for different HO events need different parameter|simulate HO with different UE moving speed, use HO success rate as reward function, compare Performance of Q-Learning Alogorithm with 3GPP standard|  
