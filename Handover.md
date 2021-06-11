@@ -37,5 +37,6 @@ RL is a subclass of machine learning and it is different from supervised-and uns
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)  
 ### State of the art  
 |Paper|Algorithm|Policy|comments|  
+|-----|------|------|-------|
 |5G Handover using Reinforcement learning|Q-Learning with e-greedy alogorithm for CMAB, HO Algorithm using Access-Beams|a RL agent replaced classic HO controller, handle the measurement report and choose action to maximize the throughput|received RSRP of link-beam after HO as reward |
 
