@@ -35,4 +35,5 @@ Because the HO parameter selection is a trade-off problem and it is hard to calc
 ### Reinforcement Learning
 RL is a subclass of machine learning and it is different from supervised-and unsupervised learning, because RL don't require labelled input/output but it uses rewards and punishment as signals for positive and negative behavior. So the key point of RL is find the maximal reward based on trial and error in the environment. And it is based on Markov Decision Process(MDP) and the key terms of RL are Agent, Action, State, Reward, Policy and Environment.
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)  
-### Start of the art
+### State of the art  
+
