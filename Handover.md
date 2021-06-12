@@ -6,12 +6,9 @@ The classic Handover process is based on the transfer of message between UE, eNB
   Handover Request to target eNB, Request Ack to serving eNB, Handover Command to UE,     Synchronisation and Handover Confirm to target eNB 
 * Handover completion  
   Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
-### Handover Parameters  
-* Reference Signal Received Power (RSRP)  
-  This prarmeter provides cell-specific signal strength metric. It is used as an Input and decision criterion.
-* Reference Signal Received Quality (RSRQ)  
-  This prarmeter provides cell-specific signal quality metric. It is also used as an Input and decision criterion.  
-  It is defined as: RSRQ = N*RSRP/RSSI  
+### Handover Variable  
+* Handover initiation threshold level RSRP and RSRQ   
+  This threshold level is used for HO initiation. When the handover threshold decreases, the probability of a late handover decreases and the ping-pong effect increases.
 * Hysteresis margin (HOM)  
   Handover will be initiated if RSRQ(t) - RSRQ(s) = Hysteresis. This Parameter is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
@@ -31,7 +28,17 @@ Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values
 * Minimize handover delay  
 * increasing system throughput  
 ### Handover performance metrics
-*
+* Average system Throughput
+* Handover rate and HO success rate
+* the number of Handover
+* Reference Signal Received Power (RSRP)  
+  This prarmeter provides cell-specific signal strength metric. It is used as an Input and decision criterion.
+* Reference Signal Received Quality (RSRQ)  
+  This prarmeter provides cell-specific signal quality metric. It is also used as an Input and decision criterion.  
+  It is defined as: RSRQ = N*RSRP/RSSI  
+* SNR/SINR  
+  SNR is defined as the ratio of signal power and the noise power.  
+  SINR is defined as the ratio of signal power to the combined noise and interference power
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
 ### Reinforcement Learning
