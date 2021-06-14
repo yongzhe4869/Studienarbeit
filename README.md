@@ -8,6 +8,11 @@
 * List handover terms / variables (e.g., A1-A4 events, handover rate, etc.) and explain them shortly. How are they used by handover algorithms?
 * How can the performance of handover algorithms be measured (e.g., see [1])? Create a list of metrics.
 
+## 14.06.2021
+* Add new columns to RL table (state, action, reward)
+* Clarify time-to-trigger (TTT)
+* `ns3` only uses triggered measurement reports (no periodic reports)
+
 ## State of the Art
 
 ## Timeline
