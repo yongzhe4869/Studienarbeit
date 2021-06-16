@@ -10,9 +10,11 @@ The classic Handover process is based on the transfer of message between UE, eNB
 * Handover initiation threshold level RSRP and RSRQ   
   This threshold level is used for HO initiation. When the handover threshold decreases, the probability of a late handover decreases and the ping-pong effect increases.
 * Hysteresis margin (HOM)  
-  Handover will be initiated if RSRQ(t) - RSRQ(s) = Hysteresis. This Parameter is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
+  A3 event will be triggered if RSRQ(t) - RSRQ(s) >= Hysteresis. This Parameter is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
-  HO will be initiated when the request of HO is over. It can decrease the number of unnecessary HO and avoid ping-pong effects. But it can delay the HO.  
+ Time-to-trigger (TTT) is then required to satisfy event A3. During TTT, if RSRP in the serving cell becomes higher again than that in the target cell, “leaving event” occurs so that HO would not be executed. This parameter can decrease the number of unnecessary HO and avoid ping-pong effects, but it can delay the HO.  
+ For example: Event A3 entering condition : RSRQ(t) - RSRQ(s) >= Hysteresis  
+              Event A3 leaving condition :  RSRQ(t) - RSRQ(s) >= -Hysteresis      
 Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values result in call drops and bad transmission.  
 ### Handover Events  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/ho.PNG)  
@@ -39,7 +41,10 @@ The system throughput is defined as the rate of successful messages delivered by
   It is defined as: RSRQ = N*RSRP/RSSI  
 * SNR/SINR  
   SNR is defined as the ratio of signal power and the noise power.  
-  SINR is defined as the ratio of signal power to the combined noise and interference power
+  SINR is defined as the ratio of signal power to the combined noise and interference power  
+## Two Handover algorithm in NS3  
+### A2-A4-RSRQ HO algorithm
+
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
 ### Reinforcement Learning
