@@ -17,7 +17,7 @@ The classic Handover process is based on the transfer of message between UE, eNB
               Event A3 leaving condition :  RSRQ(t) - RSRQ(s) >= -Hysteresis      
 Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values result in call drops and bad transmission.  
 ### Handover Events  
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/ho.PNG)  
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ho.PNG)  
   |Events|description|formula|  
   |----|----|-----|  
   |A1|Serving becomes better than threshold|RSRP(s)>threshold1|  
@@ -50,12 +50,13 @@ The system throughput is defined as the rate of successful messages delivered by
 4. if the best neighbor RSRQ - RSRQ(S) >= offset, it means event A3 has been triggered.
 5. Then HO process should be triggered.  
 ### strongest cell handover algorithm
-This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed. HOM and TTT should be used in order to decrease the impact of ping-pong effect.
+This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed. HOM and TTT should be used in order to decrease the impact of ping-pong effect.  
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/TTT.PNG)  
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
 ### Reinforcement Learning
 RL is a subclass of machine learning and it is different from supervised-and unsupervised learning, because RL don't require labelled input/output but it uses rewards and punishment as signals for positive and negative behavior. So the key point of RL is find the maximal reward based on trial and error in the environment. And it is based on Markov Decision Process(MDP) and the key terms of RL are Agent, Action, State, Reward, Policy and Environment.
-![](https://github.com/yongzhe4869/Studienarbeit/blob/main/RL.PNG)  
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/RL.PNG)  
 ### State of the art  
 |Paper|Algorithm|Policy|reward|state|action|  
 |------|------|-------|-------|-------|-------|
