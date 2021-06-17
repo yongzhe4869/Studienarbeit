@@ -51,6 +51,10 @@ The system throughput is defined as the rate of successful messages delivered by
 5. Then HO process should be triggered.  
 ### strongest cell handover algorithm
 This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed. HOM and TTT should be used in order to decrease the impact of ping-pong effect.  
+1. measure RSRP of serving cell and neighbor cell.
+2. if RSRP(s)-RSRP(n)>= HOM, then event A3 is triggered and Handover start.
+3. During TTT, if "leaving event" condition don't met, the Handover will be finished.
+4. UE will connect to the neighbor cell.
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/TTT.PNG)  
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
