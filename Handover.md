@@ -44,7 +44,13 @@ The system throughput is defined as the rate of successful messages delivered by
   SINR is defined as the ratio of signal power to the combined noise and interference power  
 ## Two Handover algorithm in NS3  
 ### A2-A4-RSRQ HO algorithm
-
+1. acquire RSRQ measurement from event A2 and A4.
+2. compare RSRQ of serving cell with threshold.
+3. if RSRQ(s)>=threshold of event A2, it means event A2 has been triggered, then look for the best neighbor cell.
+4. if the best neighbor RSRQ - RSRQ(S) >= offset, it means event A3 has been triggered.
+5. Then HO process should be triggered.  
+### strongest cell handover algorithm
+This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed. HOM and TTT should be used in order to decrease the impact of ping-pong effect.
 ## Handover using Reinforcement Learning
 Because the HO parameter selection is a trade-off problem and it is hard to calculate the optimal Parameter of HO(such as TTT and HOM). In this case we can use Reinforcement Learning to find the best condition and maximize the throughput.  
 ### Reinforcement Learning
