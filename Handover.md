@@ -31,7 +31,7 @@ Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values
 * Minimize handover delay  
 * increasing system throughput  
 ### Handover performance metrics
-* Average system Throughput
+* Average system Throughput  
 The system throughput is defined as the rate of successful messages delivered by all users per second. 
 * Handover rate and HO success rate
 * the number of Handover
