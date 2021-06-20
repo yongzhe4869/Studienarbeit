@@ -13,8 +13,8 @@ The classic Handover process is based on the transfer of message between UE, eNB
   Hysteresis defines the distance between the entering and leaving conditions in dB. It is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
  Time-to-trigger (TTT) is then required to satisfy event A3. During TTT, if RSRP in the serving cell becomes higher again than that in the target cell, “leaving event” occurs so that HO would not be executed. This parameter can decrease the number of unnecessary HO and avoid ping-pong effects, but it can delay the HO.  
- For example: Event A3 entering condition : RSRQ(t) - Hysteresis  >= RSRQ(s) + offset  
-              Event A3 leaving condition :  RSRQ(t) + Hysteresis  >= RSRQ(s) + offset      
+Event A3 entering condition : RSRQ(t) - Hysteresis  >= RSRQ(s) + offset  
+Event A3 leaving condition :  RSRQ(t) + Hysteresis  >= RSRQ(s) + offset      
 Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values result in call drops and bad transmission.  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/a3.PNG) 
 ### Handover Events  
