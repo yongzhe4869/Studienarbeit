@@ -10,7 +10,7 @@ The classic Handover process is based on the transfer of message between UE, eNB
 * Handover initiation threshold level RSRP and RSRQ   
   This threshold level is used for HO initiation. When the handover threshold decreases, the probability of a late handover decreases and the ping-pong effect increases.
 * Hysteresis margin (HOM)  
-  This Parameter can be regarded as tolerance of RSRP or RSRQ, because the signal strength of UE is fluctuating in practice. It is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
+  Hysteresis defines the distance between the entering and leaving conditions in dB. It is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
  Time-to-trigger (TTT) is then required to satisfy event A3. During TTT, if RSRP in the serving cell becomes higher again than that in the target cell, “leaving event” occurs so that HO would not be executed. This parameter can decrease the number of unnecessary HO and avoid ping-pong effects, but it can delay the HO.  
  For example: Event A3 entering condition : RSRQ(t) - Hysteresis  >= RSRQ(s) + offset  
@@ -44,14 +44,15 @@ The system throughput is defined as the rate of successful messages delivered by
   SNR is defined as the ratio of signal power and the noise power.  
   SINR is defined as the ratio of signal power to the combined noise and interference power  
 ## Two Handover algorithm in NS3  
+In NS3 only event-based criterion is supported(using A1-A5 event measurement report). 
 ### A2-A4-RSRQ HO algorithm
 1. acquire RSRQ measurement from event A2 and A4.
 2. compare RSRQ of serving cell with threshold.
-3. if RSRQ(s)>=threshold of event A2, it means event A2 has been triggered, then look for the best neighbor cell.
+3. if RSRQ(s)>=threshold of event A2, it means event A2 has been triggered, then look for the best neighbor cell.  
 4. if the best neighbor RSRQ - RSRQ(S) >= offset, it means event A3 has been triggered.
 5. Then HO process should be triggered.  
 ### strongest cell handover algorithm
-This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed. HOM and TTT should be used in order to decrease the impact of ping-pong effect.  
+This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed and the offset will not be supported. HOM and TTT should be used in order to decrease the impact of ping-pong effect.  
 1. measure RSRP of serving cell and neighbor cell.
 2. if RSRP(s)-RSRP(n)>= HOM, then event A3 is triggered and Handover start.
 3. During TTT, if "leaving event" condition don't met, the Handover will be finished.
