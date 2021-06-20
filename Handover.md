@@ -6,11 +6,17 @@ The classic Handover process is based on the transfer of message between UE, eNB
   Handover Request to target eNB, Request Ack to serving eNB, Handover Command to UE, Synchronisation and Handover Confirm to target eNB 
 * Handover completion  
   Path Switch Request to MME, Request Ack to target eNB, Resource in serving eNB release  
+### Types of Handover
+* Hard Handover  
+the connection to the target cell is established after the connection to the source cell is broken (break-before-make).
+* Soft Handover  
+the connection to the target cell is established before the connection to the source cell is broken (make-before-break).  
+
 ### Handover Variable  
 * Handover initiation threshold level RSRP and RSRQ   
   This threshold level is used for HO initiation. When the handover threshold decreases, the probability of a late handover decreases and the ping-pong effect increases.
 * Hysteresis margin (HOM)  
-  Hysteresis defines the distance between the entering and leaving conditions in dB. It is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
+  Hysteresis defines the distance between the entering and leaving conditions in dB and can be also regarded as the tolerance of signal strength, because in practice the signal strength is fluctrating. It is used to avoid ping-pong effect. But it also increase HO failure because it prevent necessary HO.
 * Time-to-Trigger(TTT)  
  Time-to-trigger (TTT) is then required to satisfy event A3. During TTT, if RSRP in the serving cell becomes higher again than that in the target cell, “leaving event” occurs so that HO would not be executed. This parameter can decrease the number of unnecessary HO and avoid ping-pong effects, but it can delay the HO.  
 Event A3 entering condition : RSRQ(t) - Hysteresis  >= RSRQ(s) + offset  
