@@ -57,6 +57,7 @@ In NS3 only event-based criterion is supported(using A1-A5 event measurement rep
 3. if RSRQ(s)>=threshold of event A2, it means event A2 has been triggered, then look for the best neighbor cell.  
 4. if the best neighbor RSRQ - RSRQ(S) >= offset, it means event A3 has been triggered.
 5. Then HO process should be triggered.  
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/a2a4.PNG) 
 ### strongest cell handover algorithm
 This Algorithm is to look for the best possible RSRP for UE, and the Handover will be implemented as soon as the stronger RSRP is detected. In this case event A3 should be observed and the offset will not be supported. HOM and TTT should be used in order to decrease the impact of ping-pong effect.  
 1. measure RSRP of serving cell and neighbor cell.
