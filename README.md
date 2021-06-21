@@ -2,6 +2,11 @@
 
 
 ## Meeting Minutes
+## 21.06.2021
+* State of the art overview is done; next step is to figure out what **we** want to do in your work
+* Long list of features (state space variables) could be helpful
+* Johnny and Christian will clarify simulation details and think about the scope of the work
+
 ## 07.06.2021
 * Started literature review (needs to be more precise, maybe use a table?).
 * Goal is to get an overview of the problem domain (handovers) first, then we formulate a precise task description.
