@@ -1,23 +1,23 @@
 ## Background
 In 5G communication system, mm-Wave will be used, it means the frequency of 5G is obviously higher than 4G and other typical communication system. The result of it is the obviously decreased cover range of Base Stations and the increased density of BSs. So the number of unnecessary Handover will be distinctly increased. In addition, nowadays people always like to use mobil equipments on the Car or the train. The fast moving user equipments will also augment "ping-pong" effort and failure rate of Handover. In order to optimize the performance of Handover, we can utilize Reinforcement learning to look for the optimal parameter for Handover.
 ## System model
-* Scenario: UEs with high-speed (>120 km/h), small coverage area of BSs(radius:200-400m)
+* Scenario: UEs with high-speed (>120 km/h), small coverage area of BSs(radius:100-300m)
 * Simulator: NS3
 * RL algorithm: Q-learning/ deep Q-learning
-* Goal: to maximize system throughput(Bit rate) and Handover success rate  
+* Goal: to maximize system throughput(Bit rate) and minimize Handover failure rate  
 * possible state variables:  
 1. RSRP/RSRQ 
 2. SNR/SINR
 3. HOM, TTT(A3 RSRP HO algorithm)
 4. Threshold, offset(A2 A4 RSRQ HO algorithm)
-5.  UE speed
-6.  one hot-code of serving BS  
+5. UE speed
+6. one hot-code of serving BS  
 * Network topology:
     
           |     + ---------------------------------------------------------------------------->
           |     UE
           |
-          |               d                   d                   d
+          |               d                   d                   d                  d
         y |     |-------------------x-------------------x-------------------x-----------------
           |     |                 eNodeB              eNodeB              eNodeB
           |   d |
