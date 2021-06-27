@@ -12,7 +12,7 @@ In 5G communication system, mm-Wave will be used, it means the frequency of 5G i
 4. Threshold, offset(A2 A4 RSRQ HO algorithm)
 5.  UE speed
 6.  one hot-code of serving BS  
-Network topology:
+* Network topology:
     
           |     + ---------------------------------------------------------------------------->
           |     UE
