@@ -4,13 +4,27 @@ In 5G communication system, mm-Wave will be used, it means the frequency of 5G i
 * Scenario: UEs with high-speed (>120 km/h), small coverage area of BSs(radius:200-400m)
 * Simulator: NS3
 * RL algorithm: Q-learning/ deep Q-learning
-* Goal: to maximize system throughput(Bit rate) and Handover success rate
+* Goal: to maximize system throughput(Bit rate) and Handover success rate  
 * possible state variables:  
 1. RSRP/RSRQ 
 2. SNR/SINR
-3. HOM, TTT(A3 event)
-4. Threshold, offset(A2 A4 event)
+3. HOM, TTT(A3 RSRP HO algorithm)
+4. Threshold, offset(A2 A4 RSRQ HO algorithm)
 5.  UE speed
 6.  one hot-code of serving BS
-7.  
+Network topology:
+    
+          |     + --------------------------------------------------------->
+          |     UE
+          |
+          |               d                   d                   d
+        y |     |-------------------x-------------------x-------------------
+          |     |                 eNodeB              eNodeB
+          |   d |
+          |     |
+          |     |                                             d = distance
+                o (0, 0, 0)                                   y = yForUe
+    
+ 
+ 
 
