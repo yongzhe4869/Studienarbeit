@@ -11,19 +11,19 @@ In 5G communication system, mm-Wave will be used, it means the frequency of 5G i
 3. HOM, TTT(A3 RSRP HO algorithm)
 4. Threshold, offset(A2 A4 RSRQ HO algorithm)
 5.  UE speed
-6.  one hot-code of serving BS
+6.  one hot-code of serving BS  
 Network topology:
     
-          |     + --------------------------------------------------------->
+          |     + ---------------------------------------------------------------------------->
           |     UE
           |
           |               d                   d                   d
-        y |     |-------------------x-------------------x-------------------
-          |     |                 eNodeB              eNodeB
+        y |     |-------------------x-------------------x-------------------x-----------------
+          |     |                 eNodeB              eNodeB              eNodeB
           |   d |
           |     |
-          |     |                                             d = distance
-                o (0, 0, 0)                                   y = yForUe
+          |     |                                                          d = distance
+                o (0, 0, 0)                                                y = yForUe
     
  
  
