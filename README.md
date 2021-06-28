@@ -2,6 +2,11 @@
 
 
 ## Meeting Minutes
+
+## 28.06.2021
+* One more week to clarify the exact task (all of us work on that)
+  * How is our topic different to other state of the art literature?
+
 ## 21.06.2021
 * State of the art overview is done; next step is to figure out what **we** want to do in your work
 * Long list of features (state space variables) could be helpful
