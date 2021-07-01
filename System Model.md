@@ -27,15 +27,22 @@ Some paper have researched Handover of High speed UEs based on LTE Network. And 
           |     |                                                          d = distance
                 o (0, 0, 0)                                                y = yForUe
 ## Parameter in NS3  
+Parameter in lena-x2-handover-measures.cc
 |parameter|meaning|default|    
 |-----|-------|------|  
 |`numberOfUes`|the number of Users|1|  
 |`numberOfEnbs`|the number of Base Stations|2|  
-|`distance`|the distance between the BSs|500 m|  
-|`yForUe`|the position of y axis|500 m|  
+|`distance`|the distance between the BSs|500.0 m|  
+|`yForUe`|the position of y axis|500.0 m|  
 |`speed`|the speed of UEs|20m/s|  
-|`simTime`|Total duration of the simulation|75 s|  
-|`enbTxPowerDbm`|Tx power used by BSs|46 dBm|
+|`simTime`|Total duration of the simulation|75.0 s|  
+|`enbTxPowerDbm`|Tx power used by BSs|46.0 dBm|  
+|`ServingCellThreshold`|the Threshold of A2 event (A2A4)|30 dB|  
+|`NeighbourCellOffset`|the offset for A3 event (A2A4)|1 dB|  
+|`Hysteresis`| Handover margin (A3)|3.0 dB|  
+|`TimeToTrigger`| Time to Trigger|256 ms|  
+|`DateRate`|the value of Date rate|100 Gb/s|  
+|`Delay`| the delay of the system| 0.010 s|  
  
  
 
