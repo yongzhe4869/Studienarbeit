@@ -27,10 +27,15 @@ Some paper have researched Handover of High speed UEs based on LTE Network. And 
           |     |                                                          d = distance
                 o (0, 0, 0)                                                y = yForUe
 ## Parameter in NS3  
-|parameter|meaning|  
-|-----|-------|  
-|numberOfUes|the number of Users|  
-|||
+|parameter|meaning|default|    
+|-----|-------|------|  
+|`numberOfUes`|the number of Users|1|  
+|`numberOfEnbs`|the number of Base Stations|2|  
+|`distance`|the distance between the BSs|500 m|  
+|`yForUe`|the position of y axis|500 m|  
+|`speed`|the speed of UEs|20m/s|  
+|`simTime`|Total duration of the simulation|75 s|  
+|`enbTxPowerDbm`|Tx power used by BSs|46 dBm|
  
  
 
