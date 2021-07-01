@@ -40,7 +40,7 @@ Parameter in lena-x2-handover-measures.cc
 |`ServingCellThreshold`|the Threshold of A2 event (A2A4)|30 dB|  
 |`NeighbourCellOffset`|the offset for A3 event (A2A4)|1 dB|  
 |`Hysteresis`| Handover margin (A3)|3.0 dB|  
-|`TimeToTrigger`| Time to Trigger|256 ms|  
+|`TimeToTrigger`| Time to Trigger (A3)|256 ms|  
 |`DateRate`|the value of Date rate|100 Gb/s|  
 |`Delay`| the delay of the system| 0.010 s|  
  
