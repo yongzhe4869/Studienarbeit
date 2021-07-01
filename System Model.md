@@ -13,7 +13,6 @@ Some paper have researched Handover of High speed UEs based on LTE Network. And 
 4. Threshold, offset(A2 A4 RSRQ HO algorithm)
 5. UE speed
 6. one hot-code of serving BS
-7. the number of HO  
 * Network topology:
     
           |     + ---------------------------------------------------------------------------->
