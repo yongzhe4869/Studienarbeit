@@ -40,7 +40,10 @@ Parameter in `lena-x2-handover-measures.cc`
 |`NeighbourCellOffset`|the offset for A3 event (A2A4)|1 dB|  
 |`Hysteresis`| Handover margin (A3)|3.0 dB|  
 |`TimeToTrigger`| Time to Trigger (A3)|256 ms|  
+|`Interval`|The time to wait between packets|10ms|  
+|`MaxPackets`| The maximum number of packets the application will send|1000000|  
 |`DateRate`|the value of Date rate|100 Gb/s|  
+|`Mtu`|Maximum Transmission units to device|1500 bytes|
 |`Delay`| the delay of the system| 0.010 s|  
  
  
