@@ -3,6 +3,14 @@
 
 ## Meeting Minutes
 
+## 05.07.2021
+* Possible scenarios:
+  * A9 scenario; compare implemented `ns3` algorithms (like A2A4) with your `RL` algorithm
+  * Small cell scenario (like in 5G) with user mobility (ultra-dense networks); problem is `ns3` does not have 5G Radio (NewRadio); could be an extension
+* Check available data from measurement reports in `ns3`; read and understand the `A2A4` algorithm
+* Johnny and Christian write a draft of task description until next meeting; we can discuss it then
+* Christian continues implementing the A9 scenario, so we can use it for this thesis
+
 ## 28.06.2021
 * One more week to clarify the exact task (all of us work on that)
   * How is our topic different to other state of the art literature?
