@@ -25,6 +25,16 @@ Some paper have researched Handover of High speed UEs based on LTE Network. And 
           |     |
           |     |                                                          d = distance
                 o (0, 0, 0)                                                y = yForUe
+### Reinforcement learning architecture  
+
+
+
+
+
+
+
+
+
 ## Parameter in NS3  
 Parameter in `lena-x2-handover-measures.cc`
 |parameter|meaning|default|    
