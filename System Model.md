@@ -34,8 +34,10 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * A2 Measurment report: `cellId`, `RSRP`,`RSRQ` of serving cell.  
 * A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of target cell.
 ### Reinforcement learning architecture  
-Agent: UE  
-Action: UE
+* Agent: User Equipment  
+* Action: chosen target BS(cell ID) to HO  
+* State: 
+
 
 
 
