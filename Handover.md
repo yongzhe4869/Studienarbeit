@@ -31,6 +31,7 @@ Notice: Too low HO offset and TTT values cause ping-pong effect. Too high values
   |A2|Serving becomes worse than threshold|RSRP(s)<threshold2|  
   |A3|Neighbour becomes offset better than serving|RSRP(t)-RSRQ(S)>offset|  
   |A4|Neighbour becomes better than threshold|RSRP(t)>threshold3|  
+  |A5|Serving becomes worse than threshold1 and neighbour becomes better than threshold2|RSRP(s)<threshold1, RSRP(t)>threshold2|
 ### Optimization principles  
 * Minimize the number of handover failures  
 * Minimize the number of unnecessary handovers  
