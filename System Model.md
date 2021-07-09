@@ -32,11 +32,13 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * The threshold for Event A2: `ServingCellThreshold`    
 * The offset used in the second condition : `NeighbourCellOffset`  
 * A2 Measurment report: `cellId`, `RSRP`,`RSRQ` of serving cell.  
-* A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of target cell.
+* A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of neighbor cell.
 ### Reinforcement learning architecture  
 * Agent: User Equipment  
 * Action: chosen target BS(cell ID) to HO  
-* State: 
+* State: A2 Threshold, Offset, RSRP  
+* Reward: system Throughout and HO success rate
+Q-learning:  
 
 
 
