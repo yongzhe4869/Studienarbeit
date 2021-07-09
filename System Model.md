@@ -28,8 +28,11 @@ Some paper have researched Handover of High speed UEs based on LTE Network. And 
 ### A2A4 Handover algorithm  
 Handover algorithm implementation based on RSRQ measurements, Event A2 and Event A4.  
 Handover decision made by this algorithm is primarily based on Event A2 measurements (serving cell's RSRQ becomes worse than threshold). When the event is triggered, the first condition of handover is fulfilled.  
-Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are used to detect neighbouring cells and their respective RSRQ. When a neighbouring cell's RSRQ is higher than the serving cell's RSRQ by a certain offset, then the second condition of handover is fulfilled.When the first and second conditions above are fulfilled, the algorithm informs the eNodeB RRC to trigger a handover.  
-The threshold for Event A2 can be configured in the `ServingCellThreshold` attribute. The offset used in the second condition can also be configured by setting the `NeighbourCellOffset` attribute.  
+Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are used to detect neighbouring cells and their respective RSRQ. When a neighbouring cell's RSRQ is higher than the serving cell's RSRQ by a certain offset, then the second condition of handover is fulfilled. When the first and second conditions above are fulfilled, the algorithm informs the eNodeB RRC to trigger a handover.  
+The threshold for Event A2: `ServingCellThreshold`    
+The offset used in the second condition : `NeighbourCellOffset`  
+A2 Measurment report: `cellId`, `RSRP`,`RSRQ` of serving cell.  
+A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of target cell.
 ### Reinforcement learning architecture  
 
 
