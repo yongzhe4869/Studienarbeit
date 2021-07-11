@@ -40,7 +40,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * Reward(r): 
     * system Throughout is defined as successful messages delivered by all users per second.  
     Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
-    * HO success rate = HO confirm / HO Request
+    * HO success rate = HO confirm / HO Request  
 Q-learning:  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/Q%20learning.PNG)  
 
