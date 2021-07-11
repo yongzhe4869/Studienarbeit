@@ -37,14 +37,11 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * Agent: User Equipment  
 * Action: chosen target BS(cell ID) to HO  
 * State: A2 Threshold, Offset, RSRP  
-* Reward: system Throughout and HO success rate
+* Reward: 
+    * system Throughout is defined as successful messages delivered by all users per second.  
+    Throughput =  (Total delivered messages of all UEs )/(Total duration of simulation)
+    * HO success rate
 Q-learning:  
-
-
-
-
-
-
 
 
 
