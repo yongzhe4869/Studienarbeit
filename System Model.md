@@ -42,7 +42,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
     Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
     * HO success rate = HO confirm / HO Request
 Q-learning:  
-
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/Q learning.PNG)  
 
 
 
