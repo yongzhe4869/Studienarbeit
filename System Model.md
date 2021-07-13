@@ -36,7 +36,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 ### Reinforcement learning architecture  
 * Agent: User Equipment  
 * Action(a): chosen target BS(cell ID) to HO  
-* State(s): A2 Threshold(0....34), Offset (0....30)  
+* State(s): `ServingCellThreshold`(0....34), `NeighbourCellOffset` (0....30)  
 * Reward(r): 
     * system Throughout is defined as successful messages delivered by all users per second.  
     Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
