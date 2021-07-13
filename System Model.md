@@ -45,7 +45,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
     * e-greedy: The e-Greedy Algorithm makes use of the exploration-exploitation tradeoff.  
   for example: if e = 10%, agent will take random action with 10% possibility and find largest value in Q-table with 90% possibility.
     * Q-table:  
-   ||a1|a2|  
+   | |a1|a2|  
    |---|---|---|  
    |s1| | |  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/Q%20learning.PNG)  
