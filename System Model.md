@@ -52,7 +52,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
    |s1(thres1, offset1)| | | | | |  
    |s2(thres2, offset2)| | | | | |  
    |.....||||||  
-   |sn||||||  
+   |sn(thres n, offset n)||||||  
 
 
 ## Parameter in NS3  
