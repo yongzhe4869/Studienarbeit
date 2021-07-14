@@ -34,7 +34,7 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * A2 Measurment report: `cellId`, `RSRP`,`RSRQ` of serving cell.  
 * A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of neighbor cell.
 ### Reinforcement learning architecture  
-The NS3 will collect data of UE measurement during the whole simulation, such as RSRQ, RSRP of all cells and position of UE. According to these data included state and reward Agent should make a decision whether UE should make a Handover now and which BS should UE make contact.
+The NS3 will collect data of UE measurement during the whole simulation, such as RSRQ, RSRP of all cells and position of UE. According to these data included state and reward Agent should make a decision whether UE should make a Handover now and which BS should UE make contact.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/system.jpg)   
  
 * Agent: HO algorithm 
