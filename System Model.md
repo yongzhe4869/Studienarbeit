@@ -39,7 +39,7 @@ The NS3 will collect data of UE measurement during the whole simulation, such as
  
 * Agent: HO algorithm 
 * Action(a): whether Handover have triggered or not, chosen target BS(cell ID) and the best RSRP  
-* State(s): `ServingCellThreshold`(0....34), `NeighbourCellOffset` (0....30)  
+* State(s): Position of the UE, RSRP of all BS 
 * Reward(r): 
     * system Throughout is defined as successful messages delivered by all users per second.  
     Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
