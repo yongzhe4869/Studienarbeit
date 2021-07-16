@@ -52,10 +52,10 @@ The NS3 will collect data of UE measurement during the whole simulation, such as
 * Q-table:   
    | |a1|a2|a3|...|an|  
    |----|----|----|----|-----|-----|  
-   |s1(thres1, offset1)| | | | | |  
-   |s2(thres2, offset2)| | | | | |  
+   |s1(position 1)| | | | | |  
+   |s2(position2)| | | | | |  
    |.....||||||  
-   |sn(thres n, offset n)||||||  
+   |sn(position n)||||||  
 
 
 ## Parameter in NS3  
