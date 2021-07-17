@@ -38,12 +38,18 @@ The NS3 will collect data of UE measurement during the whole simulation, such as
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/system.jpg)   
  
 * Agent: HO algorithm 
-* Action(a): whether Handover have triggered or not, chosen target BS(cell ID) and the best RSRP  
+* Action(a): whether Handover have triggered or not, chosen target BS(cell ID) and HO event(A1, A2, A3, A4, A5) 
 * State(s): Position of the UE, RSRP of all BS 
 * Reward(r): 
     * system Throughout is defined as successful messages delivered by all users per second.  
     Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
     * HO success rate = HO confirm / HO Request  
+* some static parameter:
+    * speed of UE
+    * Threshold of HO event
+    * offset for A3
+    * HO margin
+    * Time to Trigger 
 * Q-learning:  
     * e-greedy: The e-Greedy Algorithm makes use of the exploration-exploitation tradeoff.  
   for example: if e = 10%, agent will take random action with 10% possibility and find largest value in Q-table with 90% possibility.
