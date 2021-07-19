@@ -3,6 +3,24 @@
 
 ## Meeting Minutes
 
+## 19.07.2021
+* Check list online (Google docs)
+  * Fill in your matr. number
+  * Add signature as an image
+  * Check the information of the check list for errors (e.g., check all dates)
+* ns3 handover interface specifications ((cpp file)[https://www.nsnam.org/doxygen/a2-a4-rsrq-handover-algorithm_8cc_source.html]:
+  * `void DoReportUeMeas (uint16_t rnti, LteRrcSap::MeasResults measResults)` is called whenever a handover event (A1-A4) happens
+    * `rnti` identifies UEs uniquely
+    * `MeasResults` contains `RSRP`, `RSRQ` values for the serving cell and neighbors
+  * `void TriggerHandover (uint16_t rnti, uint16_t targetCellId)`
+    * Triggers handover of UE identified by `rnti` to cell with `targetCellId`
+  * Rethink state space, action space and rewards based on that interface
+* Build `ns3` and run examples from the `LTE` module 
+   * `lena-x2-handover.cc`
+   * `lena-x2-handover-measures.cc`
+* Christian writes first `ns3` handover algorithm and interface to Python
+   * Use that with examples once done
+
 ## 05.07.2021
 * Possible scenarios:
   * A9 scenario; compare implemented `ns3` algorithms (like A2A4) with your `RL` algorithm
