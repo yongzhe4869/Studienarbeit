@@ -36,14 +36,13 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 ### Reinforcement learning architecture  
 The NS3 will collect data of UE measurement during the whole simulation, such as RSRQ, RSRP of all cells and position of UE. According to these data included state and reward Agent should make a decision whether UE should make a Handover now and which BS should UE make contact.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/system.jpg)   
- 
-* Agent: HO algorithm 
-* Action(a): whether Handover have triggered or not, chosen target BS(cell ID) and HO event(A1, A2, A3, A4, A5) 
-* State(s): Position of the UE, RSRP of all BS 
+ There are many UEs in the system, each UE will run the HO algorithm based on RL in the same time.
+* Agent: UE 
+* Action(a): whether Handover have triggered or not(ture or false), chosen target BS(cell ID) and HO event ID (A1, A2, A3, A4, A5) 
+* State(s): Position of the UE, RSRP of all BS, `cellID` of serving BS
 * Reward(r): 
     * system Throughout is defined as successful messages delivered by all users per second.  
-    Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)
-    * HO success rate = HO confirm / HO Request  
+    Throughput =  (Total delivered messages of all UEs ) / (Total duration of simulation)  
 * some static parameter:
     * speed of UE
     * Threshold of HO event
