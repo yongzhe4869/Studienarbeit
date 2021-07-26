@@ -3,6 +3,10 @@
 
 ## Meeting Minutes
 
+## 26.07.2021
+* Interface between `ns3` and Python will be ready soon (Christian)
+* Write `RLHandoverAlgorithm` in `ns3` (Christian)
+
 ## 19.07.2021
 * Check list online (Google docs)
   * Fill in your matr. number
