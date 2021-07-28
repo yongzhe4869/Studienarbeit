@@ -32,7 +32,12 @@ Event A4 measurements (neighbour cell's RSRQ becomes better than threshold) are 
 * The threshold for Event A2: `ServingCellThreshold`    
 * The offset used in the second condition : `NeighbourCellOffset`  
 * A2 Measurment report: `cellId`, `RSRP`,`RSRQ` of serving cell.  
-* A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of neighbor cell.
+* A4 Measurment report: `cellId`, `RSRP`,`RSRQ` of neighbor cell.  
+* `void DoReportUeMeas (uint16_t rnti, LteRrcSap::MeasResults measResults)` is called whenever a handover event (A1-A4) happens  
+    * `rnti` identifies UEs uniquely  
+    * `MeasResults` contains `RSRP`, `RSRQ` values for the serving cell and neighbors  
+  * `void TriggerHandover (uint16_t rnti, uint16_t targetCellId)`  
+    * Triggers handover of UE identified by `rnti` to cell with `targetCellId`
 ### Reinforcement learning architecture  
 The NS3 will collect data of UE measurement during the whole simulation, such as RSRQ, RSRP of all cells and position of UE. According to these data included state and reward Agent should make a decision whether UE should make a Handover now and which BS should UE make contact.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/system.jpg)   
