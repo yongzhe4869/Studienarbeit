@@ -9,4 +9,12 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 * value-based: learn the state or state-action value. Act by choosing the best action in the state. Exploration is necessary.  
 * policy-based: learn directly the stochastic policy function that maps state to action. Act by sampling policy.  
 * Model-Based: learn the model of the world, then plan using the model. Update and re-plan the model often.
-![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/DRL.PNG)  
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/DRL.PNG)   
+### Some popular RL algorithm
+|Algorithm|policy|value/policy|action space|state space|Python library|  
+|-----|-----|-----|------|------|------|   
+|Q-learing|off-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
+|DQN|off-policy|value-based|Discrete|Continuous|Tensorflow|  
+|SARSA|on-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
+|SARSA(lambda)|on-policy|value-based|Discrete|Discrete|Numpy&Pandas|
+|||||||
