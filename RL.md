@@ -17,4 +17,4 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 |DQN|off-policy|value-based|Discrete|Continuous|Tensorflow|  
 |SARSA/SARSA(lambda)|on-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
 |DDPG|off-policy|policy-based|Continuous|Continuous|Tensorflow&Numpy|  
-|A3C|on-policy|policy&value-based|Continuous|Continuous|Tensorflow&Numpy|  
+|A3C|on-policy|policy-&value-based|Continuous|Continuous|Tensorflow&Numpy|  
