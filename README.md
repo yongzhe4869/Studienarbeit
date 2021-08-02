@@ -3,6 +3,19 @@
 
 ## Meeting Minutes
 
+## 02.08.2021
+* Christian provided code with interface between `ns3` and Python based on inter-process communication with TCP/IP and protocol buffers (protobuf)
+* Write a `ns3-mock.py` file to test the interface (based on `host.py`)
+  * Scenario with two cells and one UE
+  * Environment
+      * Keep track of the UE's current serving cell over time
+      * Let RSRP values vary over time (sin waves with phase shift)
+      * State: RSRP values of both cells (serving and neighbor)
+      * Reward: Proportional to serving cell RSRP
+  * Action: Either stay in currrent cell or change to neighbor
+* Train an agent in the `ns3-mock` environment (create new file that uses `ProtoHostEnv` as the `env` for the agent)
+  * Expected behaviour: Agent wants to stay connected to cell with the highest `RSRP`
+
 ## 26.07.2021
 * Interface between `ns3` and Python will be ready soon (Christian)
 * Write `RLHandoverAlgorithm` in `ns3` (Christian)
