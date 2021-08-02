@@ -19,3 +19,6 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 |DDPG|off-policy|policy-based|Continuous|Continuous|Tensorflow&Numpy|  
 |A3C|on-policy|policy-&value-based|Continuous|Continuous|Tensorflow&Numpy|  
 ### A Simple example
+
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example1.PNG)   
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example2.PNG)   
