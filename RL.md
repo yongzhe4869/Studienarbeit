@@ -19,6 +19,11 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 |DDPG|off-policy|policy-based|Continuous|Continuous|Tensorflow&Numpy|  
 |A3C|on-policy|policy-&value-based|Continuous|Continuous|Tensorflow&Numpy|  
 ### A Simple example
-
+cell_1 = -t+50+sin(t+pi/2)  
+cell_2 = t+sin(t+pi)  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example.PNG)   
+The output is a list of RSRPs as State, Handover decision as Action and serving cell_id  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example2.PNG)   
+The `env.py` has recevied state and reward.  
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/env3.PNG)   
+
