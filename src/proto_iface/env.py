@@ -3,7 +3,8 @@ import argparse
 
 import host
 import env_pb2
-
+import ns3_mock as ns
+import RL_Agent as RL
 
 class ProtoHostEnv(gym.core.Env):
     def __init__(self, _host, port):
@@ -65,11 +66,16 @@ def main():
     env = ProtoHostEnv(args.host, args.port)
     s = env.reset()
     print(f"init state: {s.value}")
-    for i in range(10):
-        action = i
-        state, r, done, info = env.step(action)
-        print(state, r, done, info)
-
+    Agent=RL.Qlearning([1,2])
+    for j in range(10):
+        for i in range(10):
+            action =Agent.choose_action(i)
+            state, r, done, info = env.step(action)
+            Agent.learn(i,action,r,i+1)       
+    #a=Action(Agent.q_table)
+    #print(a)
+            print(state, r, done, info)
+    print(Agent.q_table)
 
 if __name__ == "__main__":
     main()
