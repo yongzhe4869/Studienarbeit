@@ -1,3 +1,7 @@
+## 16.08.2021
+* Do not use your own implementations for QLearning etc.; use libraries like stable-baselines instead.
+* Have a look at [the CartPole Environment example from stable baselines](https://stable-baselines.readthedocs.io/en/master/guide/examples.html). We want to use our `ProtoHostEnv` together with `ns3-mock.py` as the `env` for RL libraries. Please create a proof of concept.
+
 ## 02.08.2021
 * Christian provided code with interface between `ns3` and Python based on inter-process communication with TCP/IP and protocol buffers (protobuf)
 * Write a `ns3-mock.py` file to test the interface (based on `host.py`)
