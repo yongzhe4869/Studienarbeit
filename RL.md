@@ -22,9 +22,10 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 cell_1 = -t+10+sin(t+pi/2)  
 cell_2 = t+sin(t+pi)  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example.PNG)   
-The output is a list of RSRPs as State, Handover decision as Action and serving cell_id  
+The output is a list of RSRPs as State, reward and serving cell_id  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example5.PNG)   
-The `env.py` has recevied state and reward.  
+The `env.py` has recevied state and reward and take a action.  
+`ns3_mock.py` has recevied action from `env.py`.
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)   
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
 
