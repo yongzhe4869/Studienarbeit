@@ -11,13 +11,13 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 * Model-Based: learn the model of the world, then plan using the model. Update and re-plan the model often.
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/DRL.PNG)   
 ### Some popular RL algorithm
-|Algorithm|policy|value/policy|action space|state space|Python library|  
-|-----|-----|-----|------|------|------|   
-|Q-learing|off-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
-|DQN|off-policy|value-based|Discrete|Continuous|Tensorflow|  
-|SARSA/SARSA(lambda)|on-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
-|DDPG|off-policy|policy-based|Continuous|Continuous|Tensorflow&Numpy|  
-|A3C|on-policy|policy-&value-based|Continuous|Continuous|Tensorflow&Numpy|  
+|Algorithm|description|policy|value/policy|action space|state space|  
+|-----|-----|-----|-----|------|------|   
+|SAC|Soft Actor Critic|off-policy|value-based|Continuous|Continuous/Discrete|   
+|DQN|Deep Q Network|off-policy|value-based|Discrete|Continuous/Discrete|   
+|SARSA/SARSA(lambda)|on-policy|value-based|Discrete|Discrete|   
+|DDPG|Deep Deterministic Policy Gradient|off-policy|policy-based|Continuous|Continuous/Discrete|   
+|A3C| Asynchronous Advantage Actor Critic|on-policy|policy-&value-based|Continuous/Discrete|Continuous/Discrete|  
 ### A Simple example using Deep Q-learning Agent
 The model of signal power for two cells:  
 * cell_1 = -t+10+sin(t+pi/2)  
