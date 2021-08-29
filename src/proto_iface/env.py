@@ -1,20 +1,31 @@
 import gym
 import argparse
+from stable_baselines3 import DQN
+from gym import spaces
+from stable_baselines3.common.env_checker import check_env
+from stable_baselines3.common.callbacks import StopTrainingOnMaxEpisodes
 
 import host
 import env_pb2
 import ns3_mock as ns
 import RL_Agent as RL
-
+import numpy as np
 class ProtoHostEnv(gym.core.Env):
     def __init__(self, _host, port):
         self.iface = host.ProtoHost()
         self.iface.listen_and_accept(_host, port)
-
+        super(ProtoHostEnv, self).__init__()
+        self.action_space = spaces.Discrete(2)
+        self.observation_space = spaces.Box(low=np.array([-10.0,-10.0]), high=np.array([100.0,100.0]),dtype=np.float32)
+        self.num_episode=0
+        
     def step(self, action):
         self.__send_action(action)
         state, reward, done, info = self.__rcv_env_state()
-        return (state, reward, done, info)
+        #if done:
+            #self.num_episode+=1
+        #print(self.num_episode)
+        return np.array(state), reward, done, dict(info)
 
     def render(self, mode="human", close="False"):
         return
@@ -28,7 +39,7 @@ class ProtoHostEnv(gym.core.Env):
 
     def reset(self):
         state = self.__rcv_init_state()
-        return state
+        return np.array(state)
 
     def __rcv_env_state(self):
         s = self.iface.rcv_proto(env_pb2.EnvState, timeout=60)
@@ -36,7 +47,7 @@ class ProtoHostEnv(gym.core.Env):
 
     def __rcv_init_state(self):
         s = self.iface.rcv_proto(env_pb2.State, timeout=60)
-        return s
+        return s.value
 
     def __send_action(self, a):
         action = env_pb2.Action()
@@ -63,19 +74,28 @@ def parse_args():
 def main():
     args = parse_args()
     host.set_logging_config(args.logging)
+    # Stops training when the model reaches the maximum number of episodes
+    callback_max_episodes = StopTrainingOnMaxEpisodes(max_episodes=50, verbose=1)
     env = ProtoHostEnv(args.host, args.port)
+    #train a Agent
+    model = DQN("MlpPolicy", env,learning_rate=0.01, learning_starts = 1, gamma = 0.9, exploration_final_eps = 0.05, verbose=1)
+  
+    model.learn(total_timesteps=1000, callback=callback_max_episodes, log_interval=1)
+    
+    model.save("DQN_HO")
+    del model # remove to demonstrate saving and loading
+
+    model = DQN.load("DQN_HO")
+
     s = env.reset()
-    print(f"init state: {s.value}")
-    Agent=RL.Qlearning([1,2])
-    for j in range(10):
-        for i in range(10):
-            action =Agent.choose_action(i)
-            state, r, done, info = env.step(action)
-            Agent.learn(i,action,r,i+1)       
-    #a=Action(Agent.q_table)
-    #print(a)
-            print(state, r, done, info)
-    print(Agent.q_table)
+    print(f"init state: {s}")
+    for i in range(20):
+        action ,_states = model.predict(s)
+        
+        s, reward, done, info = env.step(action)
+        print(s, reward, done, info)
+        if done:
+            s = env.reset()
 
 if __name__ == "__main__":
     main()
