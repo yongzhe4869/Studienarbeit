@@ -10,12 +10,12 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 * policy-based: learn directly the stochastic policy function that maps state to action. Act by sampling policy.  
 * Model-Based: learn the model of the world, then plan using the model. Update and re-plan the model often.
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/DRL.PNG)   
-### Some popular RL algorithm
+### Some popular RL algorithm(library: stable_baselines3)
 |Algorithm|description|policy|value/policy|action space|state space|  
 |-----|-----|-----|-----|------|------|   
 |SAC|Soft Actor Critic|off-policy|value-based|Continuous|Continuous/Discrete|   
 |DQN|Deep Q Network|off-policy|value-based|Discrete|Continuous/Discrete|   
-|SARSA/SARSA(lambda)|on-policy|value-based|Discrete|Discrete|   
+|PPO| Proximal Policy Optimization|on-policy|policy-based|Continuous/Discrete|Continuous/Discrete|   
 |DDPG|Deep Deterministic Policy Gradient|off-policy|policy-based|Continuous|Continuous/Discrete|   
 |A3C| Asynchronous Advantage Actor Critic|on-policy|policy-&value-based|Continuous/Discrete|Continuous/Discrete|  
 ### A Simple example using Deep Q-learning Agent
