@@ -18,14 +18,19 @@ As a rule the RL will be devided into Model-free and Model-based methods. And Mo
 |SARSA/SARSA(lambda)|on-policy|value-based|Discrete|Discrete|Numpy&Pandas|  
 |DDPG|off-policy|policy-based|Continuous|Continuous|Tensorflow&Numpy|  
 |A3C|on-policy|policy-&value-based|Continuous|Continuous|Tensorflow&Numpy|  
-### A Simple example using Q-learning Agent
-cell_1 = -t+10+sin(t+pi/2)  
-cell_2 = t+sin(t+pi)  
+### A Simple example using Deep Q-learning Agent
+The model of signal power for two cells:  
+* cell_1 = -t+10+sin(t+pi/2)  
+* cell_2 = t+sin(t+pi)  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example.PNG)   
-The output is a list of RSRPs as State, reward and serving cell_id  
+The output is a list of RSRPs as State. The first value is Rsrp for cell_1, the second one is Rsrp for cell_2  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example5.PNG)   
-The `env.py` has recevied state and reward and take a action.  
-`ns3_mock.py` has recevied action from `env.py`.
+Firstly we should train a Agent based on DQN.  
+* `num_episodes`: 50
+* Policy: `Mlppolicy`
+* learning rate: 0.1 
+* gamma = 0.9
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)   
+After training the Agent can predict actions by itself and always want to keep the best Rsrp.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
 
