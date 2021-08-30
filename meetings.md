@@ -1,3 +1,7 @@
+## 30.08.2021
+* Verify that your `ns3-mock` example works properly (does the agent learn a policy that makes sense?)
+* Christian will provide a `RlHandoverAlgorithm` minimum example for `ns3`; use example scripts of `ns3` and let them use `RlHandoverAlgorithm`
+
 ## 16.08.2021
 * Do not use your own implementations for QLearning etc.; use libraries like stable-baselines instead.
 * Have a look at [the CartPole Environment example from stable baselines](https://stable-baselines.readthedocs.io/en/master/guide/examples.html). We want to use our `ProtoHostEnv` together with `ns3-mock.py` as the `env` for RL libraries. Please create a proof of concept.
