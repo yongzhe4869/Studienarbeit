@@ -1,3 +1,11 @@
+## 06.09.2021 
+* Try to make the simple model more complex
+   * Add more Base Station
+   * Add noise in the signal 
+   * Related SNR with reward function
+* Think about what the difference between our work with other papers
+* Write Thesis as early as possible
+
 ## 30.08.2021
 * Verify that your `ns3-mock` example works properly (does the agent learn a policy that makes sense?)
 * Christian will provide a `RlHandoverAlgorithm` minimum example for `ns3`; use example scripts of `ns3` and let them use `RlHandoverAlgorithm`
