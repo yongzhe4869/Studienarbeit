@@ -38,6 +38,6 @@ After training the Agent can predict actions by itself and always want to keep t
  * expanded Basestation from 2 to 5 (The amount of Basestations can be expanded into random number)
  * add gauss noise into signal model(train phase: periodic noise based on sin waves,  test phase: AWGN)
  * use SNR as reward function (SNR is proportional to throughput)  
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result5.PNG)   
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result6.PNG)   
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  
