@@ -29,7 +29,7 @@ Firstly we should train a Agent based on DQN.
 * `num_episodes`: 50
 * Policy: `Mlppolicy`
 * learning rate: 0.1 
-* gamma = 0.9
+* gamma = 0.99
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)   
 After training the Agent can predict actions by itself and always want to keep the best Rsrp.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
