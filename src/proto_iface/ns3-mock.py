@@ -1,6 +1,5 @@
 import math
 import numpy as np
-import RL_Agent as RL
 import host 
 import env_pb2
 
@@ -8,49 +7,51 @@ class data:
 
     def __init__(self):
         self.rsrp = []
-        self.rsrp_next=[]
-        self.r = 0  
+        self.snr= []
+        self.r = 0
+   
 
     def add_rsrp(self, time):
         self.rsrp=[]
-        self.rsrp.append((-time+10)+np.sin(time+np.pi/2))
-        self.rsrp.append(time+np.sin(time+np.pi/2))
-        return self.rsrp
-        # rsrp=[serving cell, neighbor cell]
-    def add_rsrp_next(self, time):
-        self.rsrp_next=[]
-        self.rsrp_next.append((-time+10)+np.sin(time+np.pi/2))
-        self.rsrp_next.append(time+np.sin(time+np.pi/2))
-        return self.rsrp
+        self.snr= []
+        power_1, snr_1 = signal(time, 0,0)
+        power_2, snr_2 = signal(time, 10,1)
+        power_3, snr_3 = signal(time, 20,2)
+        power_4, snr_4 = signal(time, 27,3)
+        power_5, snr_5 = signal(time, 35,4)
+        self.rsrp.append(power_1)
+        self.rsrp.append(power_2)
+        self.rsrp.append(power_3)
+        self.rsrp.append(power_4)
+        self.rsrp.append(power_5)
+        self.snr.append(snr_1)
+        self.snr.append(snr_2)
+        self.snr.append(snr_3)
+        self.snr.append(snr_4)
+        self.snr.append(snr_5)
+        return self.rsrp, self.snr
        
-def change(HO,rsrp):
-    # HO=1 Handover happen
-    if HO:
-        a=rsrp[1]
-        rsrp[1]= rsrp[0]
-        rsrp[0]=a    
-
 
         
-def serving_cell(rsrp):
-    for i in range(2):
-        if rsrp[i]==max(rsrp):
-            return i
-            
-
-       
+        
+def signal(time, position,p):
+    noise =  3*np.sin(time+p*np.pi/4)+np.random.normal(0,1)
+    signal = -(time-position)*(time-position)+50
+    power = signal + noise
+    if power <=0:
+        signal = 0.01*abs(noise)
+        power = 0.01*abs(noise)
+    snr = abs(signal/noise)
+    return power,snr
+ 
+ 
+ 
 def handover(i):
     cell=data()
     cell.add_rsrp(i)
-    cell.add_rsrp_next(i+1)
-    cell_id=serving_cell(cell.rsrp)
-    HO= 0
-    if cell.rsrp[0] < max(cell.rsrp):
-        HO= 1
-        #Action(HO,cell.rsrp)
-    return cell.rsrp, cell_id, cell.rsrp_next
+    return cell.rsrp, cell.snr
 
-        
+
 
             
 def main():
@@ -58,43 +59,49 @@ def main():
     host.set_logging_config(args.logging)
     host1 = host.ProtoHost()
     host1.connect(args.remote, args.port)
-    #state, cell_id, state_next = handover(0)
-    state, cell_id, state_next = handover(0)
+    
+    state, snr = handover(0)
     init_state = env_pb2.State()
-    [init_state.value.append(state[x]) for x in range(2)]
+    [init_state.value.append(state[x]) for x in range(5)]
     host1.send_proto(init_state)
     
-    for j in range(2):
+    for j in range(5):
         Action=[]
-        for i in range(10):
+        cell=0
+        for i in range(40):
             action=host1.rcv_proto(env_pb2.Action)
             Action.append(action.value)
-            
+           
             s = env_pb2.EnvState()
-            state, cell_id, state_next = handover(i)
-            s.done = i == 9
+            state, snr= handover(i)
+            print(state)
+            print(snr)
+            s.done = i == 39
             s.info.update(dict(iteration=str(i)))
-            #s.reward=0.5*max(state)
             if action.value == 0:
-                if state[0]==max(state):
-                    s.reward = 0.5*max(state)
+                if state[cell]!=max(state):
+                    s.reward = -100
                 else:
-                    s.reward = -0.1
+                    s.reward = 10*abs(max(snr))
             if action.value == 1:
-                if state[1]==max(state):
-                    s.reward= 0.5*max(state)
+                if state[cell] != max(state):
+                    s.reward= 10*abs(max(snr))
+                    if cell !=4:
+                        cell = cell+1
                 else:
-                    s.reward = -0.1
-            #change(action,state)
-            [s.state.value.append(state[i]) for i in range(2)]
-            print(np.array(s.state), s.reward, s.done, dict(s.info))
+                    s.reward = -100
+                    
+            print(action)
+            print(cell)
+            [s.state.value.append(state[i]) for i in range(5)]
+            print(np.array(s.state.value), s.reward, s.done, dict(s.info))
             host1.send_proto(s)
+       
         print(Action)
         host1.send_proto(init_state)
 
     
-    #host1.send_proto(init_state)
-    
+
 	    
 
 if __name__ == "__main__":
