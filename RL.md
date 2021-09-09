@@ -39,7 +39,8 @@ After training the Agent can predict actions by itself and always want to keep t
  * add gauss noise into signal model(train phase: periodic noise based on sin waves,  test phase: AWGN)
  * use SNR as reward function (SNR is proportional to throughput)  
  Algorithm:  
- The Agent 
+ The Agent always want to keep connect with the highest RSRP.   
+ When this situation does not happend, we will give a negative reward.  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  
