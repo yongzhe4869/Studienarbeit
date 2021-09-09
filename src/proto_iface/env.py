@@ -2,13 +2,11 @@ import gym
 import argparse
 from stable_baselines3 import DQN
 from gym import spaces
-from stable_baselines3.common.env_checker import check_env
 from stable_baselines3.common.callbacks import StopTrainingOnMaxEpisodes
 
 import host
 import env_pb2
 import ns3_mock as ns
-import RL_Agent as RL
 import numpy as np
 class ProtoHostEnv(gym.core.Env):
     def __init__(self, _host, port):
@@ -16,7 +14,7 @@ class ProtoHostEnv(gym.core.Env):
         self.iface.listen_and_accept(_host, port)
         super(ProtoHostEnv, self).__init__()
         self.action_space = spaces.Discrete(2)
-        self.observation_space = spaces.Box(low=np.array([-10.0,-10.0]), high=np.array([100.0,100.0]),dtype=np.float32)
+        self.observation_space = spaces.Box(low=-1000.0, high=1000.0, shape= (5,),dtype=np.float32)
         self.num_episode=0
         
     def step(self, action):
@@ -75,21 +73,21 @@ def main():
     args = parse_args()
     host.set_logging_config(args.logging)
     # Stops training when the model reaches the maximum number of episodes
-    callback_max_episodes = StopTrainingOnMaxEpisodes(max_episodes=50, verbose=1)
+    callback_max_episodes = StopTrainingOnMaxEpisodes(max_episodes=600, verbose=1)
     env = ProtoHostEnv(args.host, args.port)
     #train a Agent
-    model = DQN("MlpPolicy", env,learning_rate=0.01, learning_starts = 1, gamma = 0.9, exploration_final_eps = 0.05, verbose=1)
-  
-    model.learn(total_timesteps=1000, callback=callback_max_episodes, log_interval=1)
+    model = DQN("MlpPolicy", env,learning_rate=0.01,learning_starts = 200, gamma = 0.99,exploration_final_eps = 0.05, verbose=1)
     
-    model.save("DQN_HO")
+    model.learn(total_timesteps=25000, callback=callback_max_episodes, log_interval=1)
+    
+    model.save("DQN_HO_2")
     del model # remove to demonstrate saving and loading
 
-    model = DQN.load("DQN_HO")
+    model = DQN.load("DQN_HO_2")
 
     s = env.reset()
     print(f"init state: {s}")
-    for i in range(20):
+    for i in range(200):
         action ,_states = model.predict(s)
         
         s, reward, done, info = env.step(action)
