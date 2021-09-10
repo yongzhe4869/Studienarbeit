@@ -1,6 +1,6 @@
 ## 10.09.2021
 * need a more sophisticated simulator so the RL algorithm can learn a more intersting policy than simply switching to the BS with the maximal RSRP. 
-* work on a simple model for the throughput of the system.
+* work on a simple model for the throughput of the system.  
 Things to consider could be:
 * A simple mobility model of mobile devices. Here you can for example say that some vehicles are driving along a road with a fixed velocity so that the distance to a particular BS * first gets smaller linearly, then has a minimum and then linearly increases again.
 * Then we can compute the SNR as a function of the distance.
