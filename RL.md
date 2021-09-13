@@ -43,4 +43,6 @@ After training the Agent can predict actions by itself and always want to keep t
  When this situation does not happend, we will give a negative reward.  
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
- 
+ ### more sophisticated simulator for DRL agent
+ * throughput is equal to shannon channel capacity and influenced by number of UEs  
+ $Throughput=\frac{Bandwidth}{numUE}\times{\log_2{1+SNR}}$
