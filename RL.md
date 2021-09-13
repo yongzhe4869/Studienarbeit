@@ -44,5 +44,13 @@ After training the Agent can predict actions by itself and always want to keep t
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  ### more sophisticated simulator for DRL agent
- * throughput is equal to shannon channel capacity and influenced by number of UEs  
+ * throughput is equal to shannon channel capacity and influenced by number of UEs    
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
+ * mobility model for vehicle:   
+ some vehicles are driving along a road with a fixed velocity so that the distance to a particular BS first gets smaller linearly, then has a minimum and then linearly increases again    
+ * According to Friis Path loss model, SNR is inversely proportional to the square of distance.   
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/formel.PNG)    
+ * The noise level is increasing along with the road  
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/distance.PNG)   
+  
 
