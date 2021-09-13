@@ -45,4 +45,4 @@ After training the Agent can predict actions by itself and always want to keep t
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  ### more sophisticated simulator for DRL agent
  * throughput is equal to shannon channel capacity and influenced by number of UEs  
- $$softmax(x_i) = \frac {e^{x_i}}{\sum_{j=0}^N{e^x_j}}$$
+![1](http://latex.codecogs.com/svg.latex?\int_a^bf(x)\ dx)
