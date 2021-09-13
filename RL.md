@@ -51,6 +51,7 @@ After training the Agent can predict actions by itself and always want to keep t
  * According to Friis Path loss model, SNR is inversely proportional to the square of distance.   
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/formel.PNG)    
  * The noise level is increasing along with the road  
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/distance.PNG)   
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/distance.PNG)  
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)
   
 
