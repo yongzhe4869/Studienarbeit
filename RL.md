@@ -44,8 +44,10 @@ After training the Agent can predict actions by itself and always want to keep t
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  ### more sophisticated simulator for DRL agent
- * throughput as reward function is equal to shannon channel capacity and influenced by number of UEs    
+ * throughput as reward function is equal to shannon channel capacity and influenced by number of UEs.    
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
+ * The number of vehicles should be variable at any time.    
+ For example, num_UE=[2,10,4,3,7]. There are too many connected UEs by 2.BS. And throughput of 2.BS will be very small, agent prefer not to connect with 2.BS.     
  * mobility model for vehicle:   
  some vehicles are driving along a road with a fixed velocity so that the distance to a particular BS first gets smaller linearly, then has a minimum and then linearly increases again. Moreover, cars can move in two opposite directions.    
  * According to Friis Path loss model, SNR is inversely proportional to the square of distance (as state space).   
