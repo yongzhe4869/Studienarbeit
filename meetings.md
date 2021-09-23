@@ -1,3 +1,6 @@
+## 20.09.2021
+* Throughput should not be simplely proportional to RSRP and SNR, it should be influenced by dynamic number of connected UEs.
+* consider inserting step function in throughput model to simulate switch to high code modulation.   
 ## 10.09.2021
 * need a more sophisticated simulator so the RL algorithm can learn a more intersting policy than simply switching to the BS with the maximal RSRP. 
 * work on a simple model for the throughput of the system.  
