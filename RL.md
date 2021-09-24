@@ -47,7 +47,8 @@ After training the Agent can predict actions by itself and always want to keep t
  * throughput as reward function is equal to shannon channel capacity and influenced by number of UEs.    
  shannon channel capacity is maximum of throughput. At predefined SNR it will switch to higher code scheme and throughput.      
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.PNG)
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.jpg)
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_1.PNG) 
  * The number of vehicles should be variable at any time.    
  For example, num_UE=[2,10,4,3,7]. There are too many connected UEs by 2.BS. And throughput of 2.BS will be very small, agent prefer not to connect with 2.BS.     
  * mobility model for vehicle:   
