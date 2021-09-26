@@ -1,3 +1,7 @@
+## 24.09.2021
+* use poission process to simulate vehicles arriving model at both end of highway. These vehicles can then move through the simulation at a given speed and are connected to BSs using A2A4 handovers.  
+* simulate throughput model in detail.  
+* compare the received throughput of the vehicles using A2A4 against the throughput of the RL handover vehicle.
 ## 20.09.2021
 * Throughput should not be simplely proportional to RSRP and SNR, it should be influenced by dynamic number of connected UEs.
 * consider inserting step function in throughput model to simulate switch to high code modulation.   
