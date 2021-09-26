@@ -29,28 +29,19 @@ Firstly we should train a Agent based on DQN.
 * `num_episodes`: 500
 * Policy: `Mlppolicy`
 * learning rate: 0.01 
-* gamma = 0.99
-![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)   
+* gamma = 0.99    
+![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)     
 After training the Agent can predict actions by itself and always want to keep the best Rsrp.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
- ### A expanded example using DQN  
- Compare with the previous example, there are following changes:   
- * expanded Basestation from 2 to 5 (The amount of Basestations can be expanded into random number)
- * add gauss noise into signal model(train phase: periodic noise based on sin waves,  test phase: AWGN)
- * use SNR as reward function (SNR is proportional to throughput)  
- Algorithm:  
- The Agent always want to keep connect with the highest RSRP.   
- When this situation does not happend, we will give a negative reward.  
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/signal.PNG)   
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train.PNG)   
  ### more sophisticated simulator for DRL agent
  * throughput as reward function is equal to shannon channel capacity and influenced by number of UEs.    
  shannon channel capacity is maximum of throughput. At predefined SNR it will switch to higher code scheme and throughput.      
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.jpg)
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_1.PNG) 
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.PNG)
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/switch.PNG) 
  * The number of vehicles should be variable at any time.    
- For example, num_UE=[2,10,4,3,7]. There are too many connected UEs by 2.BS. And throughput of 2.BS will be very small, agent prefer not to connect with 2.BS.     
+ At every moment the vehicles will be generated at both end of highway based on poission process. These vehicles will move along the highway in both direction.    
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/num_UE.PNG) 
  * mobility model for vehicle:   
  some vehicles are driving along a road with a fixed velocity so that the distance to a particular BS first gets smaller linearly, then has a minimum and then linearly increases again. Moreover, cars can move in two opposite directions.    
  * According to Friis Path loss model, SNR is inversely proportional to the square of distance (as state space).   
