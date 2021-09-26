@@ -49,6 +49,7 @@ After training the Agent can predict actions by itself and always want to keep t
  * The noise level is increasing along with the road  
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/distance.PNG)  
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/model.PNG)
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)
-  
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)   
+ * compare the received total throughput of DRL algorithm and A2A4 algorithm (DRL has better performance)
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/compare.PNG)  
 
