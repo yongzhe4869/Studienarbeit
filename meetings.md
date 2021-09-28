@@ -1,3 +1,7 @@
+## 28.09.2021
+* increase the length of highway and transfer it with actual unit
+* consider more about state space, it is possible to add the num of UE in state space.
+* continue to write your thesis 
 ## 24.09.2021
 * use poission process to simulate vehicles arriving model at both end of highway. These vehicles can then move through the simulation at a given speed and are connected to BSs using A2A4 handovers.  
 * simulate throughput model in detail.  
