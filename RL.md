@@ -57,6 +57,7 @@ After training the Agent can predict actions by itself and always want to keep t
 
 
 |parameter|value|    
+|-------|--------|     
 |the number of Base Stations|5|  
 |the distance between the BSs|500.0 m|  
 |the speed of UEs|40 m/s|  
