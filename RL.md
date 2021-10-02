@@ -34,13 +34,14 @@ Firstly we should train a Agent based on DQN.
 After training the Agent can predict actions by itself and always want to keep the best Rsrp.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
  ### more sophisticated simulator for DRL agent
+ * expand the number of BS from 2 to 5  
  * throughput as reward function is equal to shannon channel capacity and influenced by number of UEs.    
  shannon channel capacity is maximum of throughput. At predefined SNR it will switch to higher code scheme and throughput.      
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.PNG)
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/switch.PNG) 
  * The number of vehicles should be variable at any time.    
- At every moment the vehicles will be generated at both end of highway based on poission process. These vehicles will move along the highway in both direction.    
+ At every moment the vehicles will be generated at both end of highway based on poisson process. These vehicles will move along the highway in both direction.    
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/num_UE.PNG) 
  * mobility model for vehicle:   
  some vehicles are driving along a road with a fixed velocity so that the distance to a particular BS first gets smaller linearly, then has a minimum and then linearly increases again. Moreover, cars can move in two opposite directions.    
