@@ -53,14 +53,14 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)   
  * compare the received total throughput of DRL algorithm and A2A4 algorithm (DRL has better performance)
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/compare.PNG)  
- * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID    
-|Parameters|value|  
-|------|------|  
-|the number of BS|5|   
-|length of highway|2000 m|  
-|UE speed|40 m/s|   
-|bandwidth| 20 MHz|
-|Tx transmit power|20 w/ 43 dBm|  
-|transmit and receive antenna gain|31.6/ 15 dB|  
-|distance between BSs |500 m|  
-|noise|Gauss-noise|   
+ * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
+|Parameters|value|    
+|------|------|    
+|the number of BS|5|     
+|length of highway|2000 m|     
+|UE speed|40 m/s|     
+|bandwidth| 20 MHz|    
+|Tx transmit power|20 w/ 43 dBm|     
+|transmit and receive antenna gain|31.6/ 15 dB|     
+|distance between BSs |500 m|    
+|noise|Gauss-noise|     
