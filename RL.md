@@ -63,5 +63,10 @@ After training the Agent can predict actions by itself and always want to keep t
 |the speed of UEs|40 m/s|  
 |total simulation time|50 s|
 |Tx power used by BSs|20 W/43.0 dBm|  
+|received and transmit antenna gain|31.6 / 15 dB|  
+|the length of highway| 2000 m|   
+|bandwidth|20 MHz|  
+|noise|Gauss-noise|   
+
 
  
