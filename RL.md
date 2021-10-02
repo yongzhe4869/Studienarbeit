@@ -26,10 +26,10 @@ The model of signal power for two cells:
 The output is a list of RSRPs as State. The first value is Rsrp for cell_1, the second one is Rsrp for cell_2  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/example5.PNG)   
 Firstly we should train a Agent based on DQN.  
-* `num_episodes`: 500
+* `num_episodes`: 15000
 * Policy: `Mlppolicy`
-* learning rate: 0.01 
-* gamma = 0.99    
+* learning rate: 0.001 
+* gamma = 0.95    
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result3.PNG)     
 After training the Agent can predict actions by itself and always want to keep the best Rsrp.  
 ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/result4.PNG)   
