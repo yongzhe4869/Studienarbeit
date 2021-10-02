@@ -56,22 +56,11 @@ After training the Agent can predict actions by itself and always want to keep t
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
 
-|parameter|meaning|default|    
-|-----|-------|------|  
-|`numberOfUes`|the number of Users|1|  
-|`numberOfEnbs`|the number of Base Stations|2|  
-|`distance`|the distance between the BSs|500.0 m|  
-|`yForUe`|the position of y axis|500.0 m|  
-|`speed`|the speed of UEs|20m/s|  
-|`simTime`|Total duration of the simulation|75.0 s|  
-|`enbTxPowerDbm`|Tx power used by BSs|46.0 dBm|  
-|`ServingCellThreshold`|the Threshold of A2 event (A2A4)|30 dB|  
-|`NeighbourCellOffset`|the offset for A3 event (A2A4)|1 dB|  
-|`Hysteresis`| Handover margin (A3)|3.0 dB|  
-|`TimeToTrigger`| Time to Trigger (A3)|256 ms|  
-|`Interval`|The time to wait between packets|10ms|  
-|`MaxPackets`| The maximum number of packets the application will send|1000000|  
-|`DateRate`|the value of Date rate|100 Gb/s|  
-|`Mtu`|Maximum Transmission units to device|1500 bytes|
-|`Delay`| the delay of the system| 0.010 s|  
+|parameter|value|    
+|the number of Base Stations|5|  
+|the distance between the BSs|500.0 m|  
+|the speed of UEs|40 m/s|  
+|total simulation time|50 s|
+|Tx power used by BSs|20 W/43.0 dBm|  
+
  
