@@ -54,19 +54,11 @@ The NS3 will collect data of UE measurement during the whole simulation, such as
     * offset for A3
     * HO margin
     * Time to Trigger 
-* Q-learning:  
+* Deep Q-learning:  
     * e-greedy: The e-Greedy Algorithm makes use of the exploration-exploitation tradeoff.  
   for example: if e = 10%, agent will take random action with 10% possibility and find largest value in Q-table with 90% possibility.
- ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/Q%20learning.PNG)   
+ ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/DQN.PNG)   
  
-* Q-table:   
-   | |a1|a2|a3|...|an|  
-   |----|----|----|----|-----|-----|  
-   |s1(position 1)| | | | | |  
-   |s2(position2)| | | | | |  
-   |.....||||||  
-   |sn(position n)||||||  
-
 
 ## Examples from Lte in NS3  
 result of `lena-x2-handover.cc`  
