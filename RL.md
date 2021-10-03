@@ -52,7 +52,7 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/model.PNG)
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)   
  * compare the received total throughput of DRL algorithm and A2A4 algorithm (DRL has better performance)
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/compare.PNG)  
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th.PNG)  
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
 
