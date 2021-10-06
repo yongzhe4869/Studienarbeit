@@ -1,3 +1,8 @@
+## 06.10.2021
+* A handover creates a cost; shortly before and/or after the handover the throughput drops to a small value (this punishes switching cells a lot)
+* Add a more complex mobility model (e.g. two-dimensional random walks in a rectangle area)
+* Fix SNR calculation (SNR = received power / noise)
+* Keep track of all model parameters (e.g. noise level); you might want to vary some later to generate plots
 ## 28.09.2021
 * increase the length of highway and transfer it with actual unit
 * consider more about state space, it is possible to add the num of UE in state space.
