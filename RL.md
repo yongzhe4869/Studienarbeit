@@ -59,11 +59,11 @@ After training the Agent can predict actions by itself and always want to keep t
   The following figure shows how average throughput changes when UE's reach possibility is increasing.    
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_lamb.PNG)    
    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_noise.PNG)    
-    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/TTT.PNG)    
+    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)    
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
 
-|parameter|value|    
+|parameter|default value|    
 |-------|--------|     
 |the number of Base Stations|5|  
 |the distance between the BSs|500.0 m|  
@@ -74,6 +74,10 @@ After training the Agent can predict actions by itself and always want to keep t
 |the length of highway| 2000 m|   
 |bandwidth|20 MHz|  
 |noise|Gauss-noise|   
+|noise level|0.5|   
+|HOM|0.01/10dBm|  
+|TTT + HO delay|one episode/ 1s|   
+
 
 
  
