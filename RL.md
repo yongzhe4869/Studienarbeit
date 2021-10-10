@@ -61,9 +61,11 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th.PNG)    
   The following figure shows how average throughput changes when UE's speed is increasing.   
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_v.PNG)    
+   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/total_v.PNG)
   The following figure shows how average throughput changes when UE's reach possibility is increasing.    
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_lamb.PNG)    
    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_noise.PNG)    
+   
     ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)    
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
