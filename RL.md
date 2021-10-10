@@ -52,11 +52,12 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/model.PNG)
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/train_1.PNG)   
  * compare the received total throughput of DRL algorithm and A2A4 algorithm (DRL has better performance)  
- The following picture shows average throughput for 20 episodes when UE moves in 40 m/s.   
+   
  Add something new in the model:
  * modify distance model and add a distance between BS and highway. It is the minimum distance between vehicles and BS.  
  * Make strongest cell algorithm more complicated. Add HOM (10dBm) and TTT + HO delay (1s) in the model.   
  * A Handover have a cost. After Handover the throughput will drop to its 20%.
+  The following picture shows average throughput for 20 episodes when UE moves in 40 m/s. (lambda=0.5,noise level=0.5)
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th.PNG)    
   The following figure shows how average throughput changes when UE's speed is increasing.   
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_v.PNG)    
@@ -73,6 +74,7 @@ After training the Agent can predict actions by itself and always want to keep t
 |the distance between the BSs|500.0 m|    
 |distance between BS and highway| 10m |    
 |the speed of UEs|40 m/s|  
+|reached vehicles per sec| lambda=0.5|
 |total simulation time|50 s|
 |Tx power used by BSs|20 W/43.0 dBm|  
 |received and transmit antenna gain|31.6 / 15 dB|  
