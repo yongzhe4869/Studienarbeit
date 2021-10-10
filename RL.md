@@ -76,7 +76,9 @@ After training the Agent can predict actions by itself and always want to keep t
 |noise|Gauss-noise|   
 |noise level|0.5|   
 |HOM|0.01/10dBm|  
-|TTT + HO delay|one episode/ 1s|   
+|TTT + HO delay|one episode/ 1s|    
+|Propagation Model|Friis Path loss model|   
+
 
 
 
