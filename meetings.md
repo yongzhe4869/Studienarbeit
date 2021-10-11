@@ -1,5 +1,11 @@
+## 11.10.2021
+* Path loss model -> signal strength; draw noise power from a random distribution => SNR; based on the SNR, we can look up the CQI value and MCS; based on MCS, we calculate the throughput
+* Run the simulation for different noise power levels (parameter) and compare performance to baseline (A3, strongest cell alg.)
+* Plot signals (connected cell, SNR, MCS, distance to BS, number of vehicles, throughput, ...) for one example episode and compare A3 vs DRL algs.
+* Start writing as soon as possible!
+
 ## 06.10.2021
-* A handover creates a cost; shortly before and/or after the handover the throughput drops to a small value (this punishes switching cells a lot)
+* A handover creates a cost; shortly before and/or after the handover the throughput drops to a small value (this punishes switching cells a lot) :heavy_check_mark:
 * Add a more complex mobility model (e.g. two-dimensional random walks in a rectangle area)
 * Fix SNR calculation (SNR = received power / noise)
 * Keep track of all model parameters (e.g. noise level); you might want to vary some later to generate plots
