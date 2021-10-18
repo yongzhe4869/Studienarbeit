@@ -1,9 +1,14 @@
+## 18.10.2021
+* Make sure that you always provide references to other people's work
+* Figure captions end with a dot (full sentences)
+* More comments regarding written thesis in Slack
+* Focus on writing your thesis!
+
 ## 11.10.2021
 * Path loss model -> signal strength; draw noise power from a random distribution => SNR; based on the SNR, we can look up the CQI value and MCS; based on MCS, we calculate the throughput
 * Run the simulation for different noise power levels (parameter) and compare performance to baseline (A3, strongest cell alg.)
 * Plot signals (connected cell, SNR, MCS, distance to BS, number of vehicles, throughput, ...) for one example episode and compare A3 vs DRL algs.
 * Start writing as soon as possible!
-
 ## 06.10.2021
 * A handover creates a cost; shortly before and/or after the handover the throughput drops to a small value (this punishes switching cells a lot) :heavy_check_mark:
 * Add a more complex mobility model (e.g. two-dimensional random walks in a rectangle area)
