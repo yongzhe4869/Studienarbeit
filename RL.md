@@ -66,7 +66,8 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_lamb.PNG)    
    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_noise.PNG)    
    
-   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)    
+   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)
+   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/6P3.PNG) 
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
 
