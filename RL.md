@@ -39,7 +39,7 @@ After training the Agent can predict actions by itself and always want to keep t
  shannon channel capacity is maximum of throughput. At predefined SNR it will switch to higher code scheme and throughput.      
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput.PNG)    
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/throughput_snr.PNG)
-  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/switch.PNG) 
+  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/AMC.PNG) 
  * The number of vehicles should be variable at any time.    
  At every moment the vehicles will be generated at both end of highway based on poisson process. These vehicles will move along the highway in both direction.    
  ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/num_UE.PNG) 
@@ -66,7 +66,7 @@ After training the Agent can predict actions by itself and always want to keep t
   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_lamb.PNG)    
    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/th_noise.PNG)    
    
-    ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)    
+   ![](https://github.com/yongzhe4869/Studienarbeit/blob/main/Figure/ttt.PNG)    
  * expand state space: received SNR from each BS, the amount of connected devices for each BSs, current serving cell ID      
 
 
