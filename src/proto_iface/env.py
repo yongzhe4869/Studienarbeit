@@ -10,7 +10,6 @@ from stable_baselines3.common.evaluation import evaluate_policy
 import host
 import env_pb2
 import ns3_mock as ns
-import RL_Agent as RL
 import numpy as np
 class ProtoHostEnv(gym.core.Env):
     def __init__(self, _host, port):
